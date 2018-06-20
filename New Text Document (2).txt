@@ -1,0 +1,54 @@
+create table Users(user_id  varchar2(4), password varchar2(7), role varchar2(10),  user_name varchar2 (20), 
+mobile_no varchar2(10), phone varchar2(10), address varchar2(25), email varchar2(15));
+
+CREATE SEQUENCE userId_sequence
+START WITH 100;
+select * from Users;
+CREATE TABLE hotel 
+(hotel_id varchar(4), city varchar(10), 
+hotel_name varchar (20), address varchar(25), 
+description varchar(50), avg_rate_per_night number(6,2), 
+phone_no1 varchar(10), phone_no2 varchar(10), 
+rating varchar(4), email varchar(15), fax varchar(15));
+
+select * from users;
+select * from ROOMDETAILS;
+select * from BOOKINGDETAILS;
+select * from hotel;
+
+delete from users;
+insert into Users values(103,'gee','Customer','Geetha','1111111111','12345612','#23,mlo','gee@gmail.com');
+CREATE TABLE roomdetails 
+(hotel_id varchar(4),  room_id varchar(4),  room_no varchar(3), 
+room_type varchar(20), per_night_rate number(6,2), 
+availability varchar(3), 
+photo blob);
+
+drop table bookingdetails
+CREATE TABLE bookingdetails 
+(booking_id varchar(4), room_id varchar(4),  user_id varchar(4), 
+booked_from date, booked_to date, 
+no_of_adults number(6,2), no_of_children number(6,2), amount number(6,2));
+
+
+INSERT INTO roomdetails VALUES ('90','1000','1','AC',2000,'Yes',null);
+INSERT INTO roomdetails VALUES ('90','1002','2','NON-AC',1000,'Yes',null);
+
+INSERT INTO hotel VALUES ('90','Bangalore','Ginger Hotel','Whitefield','5 Star',1500,'1234567890','9876543210','4.5','ginger@g.com','13579');
+INSERT INTO hotel VALUES ('91','Bangalore','Mayura Hotel','Whitefield','4 Star',1350,'1357908642','0864213578','4.0','mayura@m.com','24680');
+
+
+INSERT INTO roomdetails VALUES ('94','1115','4','AC',4000,'Yes', utl_raw.cast_to_raw('C:\Users\kavanc\Desktop\room.jpg'));
+
+
+SELECT user_id,password,role FROM Users;
+
+INSERT INTO users VALUES ('hb','hbms12','Customer','HBMS','9974910166','2631013','Vadodara','hbms.g.com');
+INSERT INTO users VALUES ('101','hbms132','Customer','HBMS','9974910166','2631013','Vadodara','hbms.g.com');
+
+
+CREATE SEQUENCE hotel_id_sequence
+START WITH 100;
+
+CREATE SEQUENCE booking_id_sequence
+START WITH 150;
